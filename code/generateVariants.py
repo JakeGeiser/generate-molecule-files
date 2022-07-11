@@ -35,7 +35,8 @@ class molecule:
     def modifyLine9Charge(self):
         charges = self.line9charge.split(" ")
         if self.charge == "-1" or self.charge == "1" or self.charge == -1:
-            return self.line9charge
+            charges[0] = int(charges[0])
+            charges[1] = int(charges[1])
         elif self.charge == "-0"or self.charge == "0" or self.charge == 0:
             charges[0] = int(charges[0]) + 1
             charges[1] = 1
